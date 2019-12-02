@@ -19,7 +19,6 @@ RUN dnf install -y --setopt=tsflags=nodocs \
         origin-clients \
 	screen \
 	vim \
-	docker \
         tree \
         glide \
 	unzip && \
