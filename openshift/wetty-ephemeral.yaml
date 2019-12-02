@@ -96,11 +96,18 @@ objects:
           name: ${NAME}
         name: ${NAME}
       spec:
+        volumes: 
+        - name: docker-sock
+          hostPath:
+            path: /var/run/docker.sock
         containers:
         - name: ${NAME}
           image: ' '
           ports:
           - containerPort: 3000
+          volumeMounts:
+          - mountPath: /var/run/docker.sock
+            name: docker-sock
         - name: openssh
           image: ' '
           ports:
