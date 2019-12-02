@@ -102,6 +102,10 @@ objects:
             path: /var/run/docker.sock
         containers:
         - name: ${NAME}
+          securityContext:
+            allowPrivilegeEscalation: true
+            privileged: true
+            runAsUser: 2000
           image: ' '
           ports:
           - containerPort: 3000
