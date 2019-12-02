@@ -18,6 +18,8 @@ RUN dnf install -y --setopt=tsflags=nodocs \
 	openssl \
         origin-clients \
 	screen \
+	vim \
+	docker \
         tree \
         glide \
 	unzip && \
