@@ -30,6 +30,8 @@ RUN mkdir /home/default && \
     useradd -u 2000 default && \
     echo "default:${WETTY_PASSWORD:-wetty}" | chpasswd && \
     chown default:default /home/default
+    
+RUN usermod -a -G docker default
 
 RUN /usr/bin/ssh-keygen -A -N '' && \
     chmod -R a+r /etc/ssh/* && \
