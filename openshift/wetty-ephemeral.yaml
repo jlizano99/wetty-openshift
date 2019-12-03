@@ -116,6 +116,9 @@ objects:
           image: ' '
           ports:
           - containerPort: 22
+          volumeMounts:
+          - mountPath: /var/run/docker.sock
+            name: docker-sock
     triggers:
     - imageChangeParams:
         automatic: true
