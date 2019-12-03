@@ -1,4 +1,4 @@
-FROM fedora
+FROM fedora:30
 LABEL maintainer="kdevensen@gmail.com"
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk \
     HOME=/home/default \
