@@ -33,6 +33,8 @@ RUN mkdir /home/default && \
     
 RUN usermod -a -G docker default
 RUN chmod 666 /var/run/docker.sock
+RUN chmod 666 /run/docker.sock
+
 RUN /usr/bin/ssh-keygen -A -N '' && \
     chmod -R a+r /etc/ssh/* && \
     /usr/sbin/setcap 'cap_net_bind_service=+ep' /usr/sbin/sshd
