@@ -41,6 +41,7 @@ RUN /usr/bin/ssh-keygen -A -N '' && \
 
 COPY fedora-profile.sh /etc/profile.d/
 RUN chmod a+r /etc/profile.d/fedora-profile.sh
+RUN exec bash
 
 EXPOSE 22
 WORKDIR /home/default
